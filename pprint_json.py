@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import json
 import sys
 import os.path
@@ -17,12 +16,12 @@ def load_data(filepath):
 
 
 # Функция для приведения Json в читаемый вид
-def pretty_print_json(data):
-    return json.dumps(data, indent=4, sort_keys=True, ensure_ascii=False)
+def pretty_print_json(json_data):
+    return json.dumps(json_data, indent=4, sort_keys=True, ensure_ascii=False)
 
 
 if __name__ == '__main__':
     # Получаем имя json файла из командной строки
-    filename = sys.argv[1]
+    location_file = sys.argv[1]
     # Приводим json в читаемый вид
-    print(pretty_print_json(load_data(filename)))
+    print(pretty_print_json(load_data(location_file)))
