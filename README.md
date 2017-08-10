@@ -1,20 +1,54 @@
 # Prettify JSON
 
-[TODO. There will be project description]
+### Project description:
 
-# Quickstart
+This script outputs to the console the contents of the specified json file into a readable form.
 
-[TODO]
+### The requirement to the environment:
++ Linux
++ Python 3.5
 
-Example of script launch on Linux, Python 3.5:
+### How to run a script
 
 ```#!bash
 
 $ python pprint_json.py <path to file>
-# TODO add output example
 
 ```
 
-# Project Goals
+### Example of work of a script:
 
-The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
+Input: a file containing json :
+```json
+{"glossary":{"title":"example glossary","GlossDiv":{"title":"S","GlossList":{"GlossEntry":{"ID": "SGML","SortAs":"SGML","GlossTerm":"Standard Generalized Markup Language","Acronym":"SGML","Abbrev":"ISO 8879:1986","GlossDef":{"para":"A meta-markup language, used to create markup languages such as DocBook.","GlossSeeAlso":["GML","XML"]},"GlossSee":"markup"}}}}}
+```
+
+### Result of execution of a script:
+```json
+{
+    "glossary": {
+        "GlossDiv": {
+            "GlossList": {
+                "GlossEntry": {
+                    "Abbrev": "ISO 8879:1986", 
+                    "Acronym": "SGML", 
+                    "GlossDef": {
+                        "GlossSeeAlso": [
+                            "GML", 
+                            "XML"
+                        ], 
+                        "para": "A meta-markup language, used to create markup languages such as DocBook."
+                    }, 
+                    "GlossSee": "markup", 
+                    "GlossTerm": "Standard Generalized Markup Language", 
+                    "ID": "SGML", 
+                    "SortAs": "SGML"
+                }
+            }, 
+            "title": "S"
+        }, 
+        "title": "example glossary"
+    }
+}
+
+```
